@@ -3,6 +3,7 @@ import { Button } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import './AlertBox.css';
 import { setLogin } from '../slice';
+import santa from '../../public/img/santa-claus-transparent-6.png';
 
 const AlertBox = ({ login }) => {
   const dispatch = useDispatch();
@@ -15,12 +16,12 @@ const AlertBox = ({ login }) => {
     <div>
       <div id="popup1" className="overlay">
         <div className="popup">
-          <h2>Invalid !!!!</h2>
-
-          <div className="content-1">Details did not match!!</div>
+          <h2>Congratulations !!!!</h2>
+          <img src={santa} className="photo" />
+          <div className="content-1">Enjoy your Chocolates !!!</div>
 
           <Button id="play-again" onClick={playAgain}>
-            Try again
+            Click to Eat
           </Button>
         </div>
       </div>

@@ -6,7 +6,10 @@
   padding-top: 5em;
   padding-bottom: 5em;
 
-  background-image: url('https://images.unsplash.com/photo-1513297887119-d46091b24bfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-image: url('https://images.unsplash.com/photo-1542765488-53adb192042c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNocmlzdG1hcyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .calendar {
   display: grid;
@@ -15,7 +18,7 @@
   padding: 2em;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   border-radius: 0.5em;
-  background-color: rgba(8, 24, 23, 0.822);
+  background-color: rgba(41, 41, 41, 0.822);
 }
 
 .door {
@@ -24,8 +27,7 @@
   align-items: center;
   width: 15vw;
   height: 15vw;
-  background-color: rgba(8, 20, 16, 0.6);
-  border: 1px solid #ccc;
+  background: rgba(211, 47, 47, 0.91);
   border-radius: 0.5em;
   margin-bottom: 1em;
   margin-right: 1em;
@@ -37,7 +39,7 @@
 }
 
 .door:hover {
-  background-color: rgba(18, 43, 54, 0.9);
+  background: rgba(216, 57, 57, 0.91);
 }
 
 .dooropen {
@@ -47,7 +49,7 @@
   width: 15vw;
   height: 15vw;
   background-color: rgb(8, 24, 23, 0.8);
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 0.5em;
   margin-bottom: 1em;
   margin-right: 1em;
@@ -59,6 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   font-family: 'Dancing Script', cursive;
   color: #fff;
   padding: 20px;
@@ -67,29 +70,29 @@
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.7);
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 4rem;
 }
 
 .doorBox {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* width: 15vw;
-  height: 15vw;
-  background-color: rgba(8, 20, 16, 0.6);
-  border: 1px solid #ccc;
-  border-radius: 0.5em;
-  margin-bottom: 1em;
-  margin-right: 1em; */
 }
 
 .grab {
   cursor: pointer;
-  font-family: 'Dancing Script', cursive !important;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif !important;
   color: #fff !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  width: 100%;
+}
 
-  background: rgba(0, 0, 0, 0.7);
+div .grab {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .dooropen p {
@@ -105,26 +108,33 @@
   width: 80%;
   height: 80%;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-.resetbutton {
-  margin-top: 5em;
-  background-color: rgba(18, 43, 54, 0.9);
-  width: 100%;
-  height: 3em;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  border: none;
-  font-size: 1em;
-  font-weight: bold;
-  color: #f2f2f2;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .door > p {
+    font-size: 3rem;
+  }
+  .grab {
+    font-size: 18px !important;
+  }
 }
 
-.resetbutton:hover {
-  background-color: rgba(35, 71, 87, 0.9);
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .door > p {
+    font-size: 2rem;
+  }
+  .grab {
+    font-size: 15px !important;
+  }
 }
 
-.resetbutton:active {
-  background-color: rgba(71, 120, 141, 0.9);
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .door > p {
+    font-size: 1.3rem;
+  }
+
+  .grab {
+    font-size: 10px !important;
+  }
 }
