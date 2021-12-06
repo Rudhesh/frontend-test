@@ -12,7 +12,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    port: 3001,
+    port: 3000,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],

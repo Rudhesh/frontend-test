@@ -26,3 +26,54 @@ The goal of this challenge is to create a virtual representation of a winter cho
 - create a pull request for your solution from a sepperate branch pointing to main
 
 ## description of the final result
+
+First I create state action and reducer using redux toolkit.
+
+then I create a function named checkDoorToOpen inside I used new Date() method and get present day and stored in variable date
+
+then create 3 functions named
+chocolate() inside using post method
+getChocolate() inside using get method
+eatChocolate(input)inside using post method
+
+I used chocolate() function to sent data to server using axios.
+
+I used getChocolate() function to get data from server using axios.
+
+I used eatChocolate() function to get data from server second time using axios.
+
+After that I used if statement: if date >= inputDate parameter (coming from clicking the date on the browser)
+
+then called chocolate() function
+Which create object on server
+&
+then called getChocolate() function
+which get object from the server
+and save in the openBox state in the redux store
+
+(Idea is if inputDate is less then or equal to present day then sent data to server and get the same data back
+)
+
+then I create component folder inside create Door.jsx file that holds our doors data.
+
+then I return div called container inside container more divs called content and calender, Its used for styling this project
+
+and then in calender tag I map over the doors data which I imported from the components folder
+
+Inside I loop over openBox using some() method so I can iterate individually
+
+used ternary operator
+
+if selected.day === door.id then
+
+show eatChocolate() function else show checkDoorToOpen() function
+
+eatChocolate() function trigger AlertBox component
+
+AlertBox.jsx consist some elements like picture and paragraph which display on browser.
+
+I create one more state named login that stored boolean value
+
+this I use it to switch the AlterBox with the help of button.
+
+At last I used jest and testing library and build the code and run the test.

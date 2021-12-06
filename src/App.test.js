@@ -11,9 +11,9 @@ describe('App', () => {
     useAppSelector.mockImplementation(testUseAppSelector);
   });
 
-  it('renders learn react lick', () => {
+  it('renders Test Result lick', () => {
     render(<App />);
-    const linkElement = screen.getByText(/learn react/i);
+    const linkElement = screen.getByText(/Test Result/i);
     expect(linkElement).toBeInTheDocument();
   });
 });

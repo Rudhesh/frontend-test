@@ -9,7 +9,6 @@ const AlertBox = ({ login }) => {
   const dispatch = useDispatch();
   function playAgain() {
     dispatch(setLogin(false));
-    console.log({ login });
     return login;
   }
   return (

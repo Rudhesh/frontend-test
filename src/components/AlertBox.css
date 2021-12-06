@@ -16,7 +16,7 @@
 .popup {
   margin: 100px auto;
   padding: 20px;
-  background: rgba(32, 58, 63, 0.753);
+  background: rgba(32, 58, 63, 0.925);
   border-radius: 5px;
   width: 300px;
   position: relative;
@@ -40,8 +40,7 @@
   color: #333;
 }
 
-.popup .content-1,
-.content-2 {
+.popup .content-1 {
   max-height: 30%;
   overflow: auto;
   text-align: center;

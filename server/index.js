@@ -21,7 +21,7 @@ app.get('/chocolates', (_, res) => {
 app.post('/open/chocolate', (req, res) => {
   try {
     const { day } = req.body;
-    console.log(day);
+
     if (!day || day < 0 || day > 31) res.status(400).send('bad request');
 
     const buffer = fs.readFileSync('chocolates.json');

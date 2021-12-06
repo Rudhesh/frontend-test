@@ -3,13 +3,15 @@ import { useTranslation } from 'react-i18next';
 import { Typography, Button } from '@mui/material';
 import axios from 'axios';
 import './App.css';
-import doors from './json/Doors.jsx';
+import doors from './components/Doors.jsx';
 import { setLogin, setOpenBox } from './slice';
 import AlertBox from './components/AlertBox.jsx';
 import { useAppDispatch, useAppSelector } from './redux/redux.hooks';
 const App = () => {
   const { openBox, login } = useAppSelector((state) => state.slice);
+
   const dispatch = useAppDispatch();
+
   async function eatChocolate(input) {
     getChocolate();
 
@@ -36,14 +38,9 @@ const App = () => {
     if (date >= inputDate) {
       chocolate();
       getChocolate();
-      openDoor(inputDate);
     } else {
       alert('Not allowed to open yet, wait a few days');
     }
-  }
-
-  function openDoor(doorDate) {
-    getChocolate();
   }
 
   async function getChocolate() {
@@ -63,17 +60,17 @@ const App = () => {
     <div>
       <div className="container">
         <div className="content">
-          {/* <Typography>{t('happyHolidays')}</Typography>; */}
           <Typography
             style={{
               padding: 16,
               color: 'white',
               border: '2px dashed white',
               fontFamily: 'impact',
+              textAlign: 'center',
             }}
             variant="h2"
           >
-            My Chocolate Calender 2021
+            {t('My Chocolate Calender 2021')}
           </Typography>
 
           <div className="calendar">
@@ -99,7 +96,7 @@ const App = () => {
               );
             })}
           </div>
-          <section>learn react</section>
+          <section>Test Result</section>
         </div>
       </div>
     </div>
