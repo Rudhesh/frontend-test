@@ -15,7 +15,7 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root') || document.createElement('div')
 );
 
 if (module.hot) {

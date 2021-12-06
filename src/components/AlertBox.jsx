@@ -17,7 +17,7 @@ const AlertBox = ({ login }) => {
       <div id="popup1" className="overlay">
         <div className="popup">
           <h2>Congratulations !!!!</h2>
-          <img src={santa} className="photo" />
+          <img src={santa} className="photo swing" />
           <div className="content-1">Enjoy your Chocolates !!!</div>
 
           <Button id="play-again" onClick={playAgain}>

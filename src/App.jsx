@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Typography, Button } from '@mui/material';
 import axios from 'axios';
 import './App.css';
 import doors from './json/Doors.jsx';
-import { useDispatch, useSelector } from 'react-redux';
 import { setLogin, setOpenBox } from './slice';
 import AlertBox from './components/AlertBox.jsx';
+import { useAppDispatch, useAppSelector } from './redux/redux.hooks';
 const App = () => {
-  const { openBox, login } = useSelector((state) => state.slice);
-  const dispatch = useDispatch();
+  const { openBox, login } = useAppSelector((state) => state.slice);
+  const dispatch = useAppDispatch();
   async function eatChocolate(input) {
     getChocolate();
 
@@ -18,10 +18,7 @@ const App = () => {
 
     let data = res.data;
     dispatch(setLogin(true));
-    console.log(data);
   }
-
-  console.log({ openBox });
 
   function checkDoorToOpen(inputDate) {
     const doorDate = new Date(inputDate);
@@ -51,7 +48,6 @@ const App = () => {
 
   async function getChocolate() {
     const result = await axios('http://localhost:5001/chocolates');
-    console.log('get: ', result.data);
     dispatch(setOpenBox(result.data));
   }
 
@@ -67,7 +63,19 @@ const App = () => {
     <div>
       <div className="container">
         <div className="content">
-          <Typography>{t('happyHolidays')}</Typography>;
+          {/* <Typography>{t('happyHolidays')}</Typography>; */}
+          <Typography
+            style={{
+              padding: 16,
+              color: 'white',
+              border: '2px dashed white',
+              fontFamily: 'impact',
+            }}
+            variant="h2"
+          >
+            My Chocolate Calender 2021
+          </Typography>
+
           <div className="calendar">
             {doors.map((door, i) => {
               return (
@@ -91,6 +99,7 @@ const App = () => {
               );
             })}
           </div>
+          <section>learn react</section>
         </div>
       </div>
     </div>

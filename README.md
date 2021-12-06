@@ -24,3 +24,5 @@ The goal of this challenge is to create a virtual representation of a winter cho
 - define automated test using jest and testing library
 - write a description of the final result in RESULT.md
 - create a pull request for your solution from a sepperate branch pointing to main
+
+## description of the final result
